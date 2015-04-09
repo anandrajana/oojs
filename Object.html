@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+//objetcs in object - jSON
+var book = {
+	name: 'Node JS',
+	published: 2012,
+	author: {
+		firstname: 'Ryan',
+		lastname: 'Dhal'
+	}
+};
+
+console.log(book.author.firstname); //Ryan
+
+
+//constructor function with object literal
+var emp = {
+	name:'Sriram',
+	getInfo: function(){
+		console.log('I am method' + this.name + " without this keyword" + name);
+		alert(this); //object object
+	}
+}
+console.log(emp.name);
+console.log(emp.getInfo());
+
+//Constructor function - Another way of creating objects - Best Practise
+
+function Employee(){
+	this.name = 'Sriram'; //this = current object
+	this.occupation = 'Engineer';
+	this.getInfo = function(){
+		return "I'm "+ this.name + " and I'm a " + this.occupation;
+	}
+}
+
+var e = new Employee();
+console.log("employee info "+ e.occupation); //Engineer
+console.log(e.getInfo());
+
+
+
+</script>
+</head>
+<body></body>
+</html>
